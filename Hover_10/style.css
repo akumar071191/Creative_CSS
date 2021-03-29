@@ -1,0 +1,55 @@
+body,
+a,
+a:before,
+a:after {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: darkslategrey;
+  perspective: 500px;
+}
+
+a {
+  width: 300px;
+  height: 100px;
+  text-decoration: none;
+  color: black;
+  font-size: 22px;
+  position: relative;
+  font-weight: 900;
+  /* overflow: hidden; */
+  transition: all;
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+a:before,
+a:after {
+  content: "Hover me";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform-origin: top;
+  transform: rotateX(-360deg);
+  transition: all 0.5s;
+  color: white;
+}
+a:before {
+  background-color: orange;
+}
+a:after {
+  background-color: red;
+  transition-delay: 0.5s;
+}
+
+a:hover:before {
+  transform: rotateX(0deg);
+}
+a:hover:after {
+  transform: rotateX(0deg);
+}

@@ -1,0 +1,35 @@
+body, a {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+    width:300px;
+    height: 100px;
+    border:2px solid black;
+    text-decoration: none;
+    color:black;
+    font-size: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+a:before{
+    content: "";
+    position: absolute;
+    background-color: yellow;
+    
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    transition: all;
+    transition-duration: 0.5s;
+}
+
+a:hover::before{
+    transform: rotate(0deg);
+}
