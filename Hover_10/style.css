@@ -9,7 +9,7 @@ a:after {
 }
 body {
   background-color: darkslategrey;
-  perspective: 500px;
+  perspective: 0px;
 }
 
 a {
@@ -35,7 +35,7 @@ a:after {
   width: 100%;
   position: absolute;
   transform-origin: top;
-  transform: rotateX(-360deg);
+  transform: rotateX(270deg);
   transition: all 0.5s;
   color: white;
 }
@@ -44,7 +44,7 @@ a:before {
 }
 a:after {
   background-color: red;
-  transition-delay: 0.5s;
+  transition-delay: 0.25s;
 }
 
 a:hover:before {

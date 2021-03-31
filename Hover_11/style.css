@@ -1,0 +1,54 @@
+body,
+a,
+a:before,
+a:after {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: darkslategrey;
+  perspective: 0px;
+}
+
+a {
+  width: 200px;
+  height: 70px;
+  text-decoration: none;
+  border: 2px solid yellow;
+  position: relative;
+}
+
+a::before, a::after{
+  content: "Button";
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  color: yellow;
+  letter-spacing: 2px;
+  font-size: 22px;
+  transition: all 0.5s;
+}
+a::before{
+  transform: translateX(0) rotateY(0deg) scale(1);
+  opacity: 1;
+}
+a::after{
+  transform: translateX(-120%) rotateY(-180deg) scale(0.25);
+  opacity: 0;
+}
+
+a:hover::before{
+  transform: translateX(120%) rotateY(180deg) scale(0.25);
+  opacity: 0;
+}
+
+a:hover::after{
+  transform: translateX(0%) rotateY(0deg) scale(1);
+  opacity: 1;
+}
+
